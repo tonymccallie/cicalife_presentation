@@ -14,7 +14,7 @@ export class HomePage {
 
 	openEnglish() {
 		console.log('openEnglish');
-		const browser = this.iab.create('https://ionicframework.com/','_self','location=no');
+		const browser = this.iab.create('https://indd.adobe.com/view/4b8cdced-0539-4f01-8be1-4025980b9c4b','_blank','location=no');
 
 	}
 
