@@ -1,3 +1,11 @@
 page-home {
-
+	.content {
+		background-color: color($colors,grey);
+	}
+	.logo {
+		max-height: 40px;
+	}
+	.button {
+		margin-bottom: 10px;
+	}
 }
