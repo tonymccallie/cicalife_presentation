@@ -65,7 +65,7 @@ var HomePage = (function () {
     };
     HomePage.prototype.openSpanish = function () {
         console.log('openSpanish');
-        window.open('http://threeleaf.net/cicalife.epub', '_blank');
+        var browser = this.iab.create('http://threeleaf.net/cicalife.epub', '_system');
     };
     HomePage.prototype.openPortuguese = function () {
         console.log('openPortuguese');
