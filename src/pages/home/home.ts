@@ -20,7 +20,7 @@ export class HomePage {
 
 	openSpanish() {
 		console.log('openSpanish');
-		const browser = this.iab.create('http://threeleaf.net/cicalife.epub','_blank','location=no');
+		window.open('http://threeleaf.net/cicalife.epub','_blank');
 	}
 
 	openPortuguese() {
