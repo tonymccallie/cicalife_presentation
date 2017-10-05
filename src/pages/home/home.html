@@ -1,7 +1,7 @@
 <ion-header no-border>
 	<ion-navbar color="dark">
 		<ion-title>
-			<img class="logo" src="assets/img/cica_logo.svg" >
+			<img class="logo" src="assets/img/cica_logo.svg">
 		</ion-title>
 	</ion-navbar>
 </ion-header>
@@ -9,10 +9,11 @@
 <ion-content color="dark">
 	<img src="assets/img/banner_image.jpg">
 	<div padding>
+		<button ion-button full color="dark" (click)="inAppSlide()">inAppSlide</button>
+		<a ion-button full color="dark" href="http://threeleaf.net/cicalife.epub" target="_blank">ePub threeleaf.net</a>
+		<a ion-button full color="dark" href="assets/slides-tester.html">ePub direct</a><br /><br />
 		<button ion-button full color="dark" (click)="openEnglish()">BERMUDA TRANSITION ENGLISH</button>
 		<button ion-button full color="dark" (click)="openSpanish()">BERMUDA TRANSITION ESPAÑOL</button>
 		<button ion-button full color="dark" (click)="openPortuguese()">BERMUDA TRANSIÇÃO PORTUGUÊS</button>
-		<button ion-button full color="dark" href="http://threeleaf.net/cicalife.epub" target="_blank">ePub direct</button>
-		<a ion-button full color="dark" href="assets/slides-tester.html">ePub direct</a>
 	</div>
 </ion-content>

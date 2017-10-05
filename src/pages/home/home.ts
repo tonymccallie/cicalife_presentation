@@ -23,6 +23,11 @@ export class HomePage {
 		const browser = this.iab.create('http://threeleaf.net/cicalife.epub','_system');
 	}
 
+	inAppSlide() {
+		console.log('inAppSlide');
+		const browser = this.iab.create('assets/slides-tester.html','_blank','location=no');
+	}
+
 	openPortuguese() {
 		console.log('openPortuguese');
 	}
