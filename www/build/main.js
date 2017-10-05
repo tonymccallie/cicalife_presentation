@@ -65,7 +65,8 @@ var HomePage = (function () {
     }
     HomePage.prototype.openEnglish = function () {
         console.log('openEnglish');
-        var browser = this.iab.create('https://indd.adobe.com/view/4b8cdced-0539-4f01-8be1-4025980b9c4b', '_blank', 'location=no');
+        //const browser = this.iab.create('https://indd.adobe.com/view/4b8cdced-0539-4f01-8be1-4025980b9c4b','_blank','location=no');
+        var browser = this.iab.create('http://citizensinc.com/bermuda/index.html', '_blank', 'location=no');
     };
     HomePage.prototype.openSpanish = function () {
         console.log('openSpanish');
@@ -203,6 +204,7 @@ var MyApp = (function () {
             // Here you can do any higher level native things you might need.
             //statusBar.styleDefault();
             statusBar.overlaysWebView(false);
+            statusBar.styleBlackTranslucent();
             statusBar.hide();
             splashScreen.hide();
         });
