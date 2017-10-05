@@ -69,7 +69,7 @@ var HomePage = (function () {
     };
     HomePage.prototype.inAppSlide = function () {
         console.log('inAppSlide');
-        var browser = this.iab.create('assets/slides-tester.html', '_blank', 'location=no');
+        var browser = this.iab.create('assets/slides-tester.html', '_blank', 'location=no,status=no,titlebar=no');
     };
     HomePage.prototype.openPortuguese = function () {
         console.log('openPortuguese');
