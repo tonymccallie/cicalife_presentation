@@ -69,7 +69,11 @@ var HomePage = (function () {
     };
     HomePage.prototype.inAppSlide = function () {
         console.log('inAppSlide');
-        var browser = this.iab.create('assets/slides-tester.html', '_blank', 'location=no,toolbar=no');
+        var browser = this.iab.create('assets/slides-tester.html', '_blank', 'location=no');
+    };
+    HomePage.prototype.inAppSlide2 = function () {
+        console.log('inAppSlide');
+        window.open('assets/slides-tester.html', '_blank', 'location=no,status=no');
     };
     HomePage.prototype.openPortuguese = function () {
         console.log('openPortuguese');
@@ -78,7 +82,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/tonymccallie/Sites/cicalife/src/pages/home/home.html"*/'<ion-header no-border>\n	<ion-navbar color="dark">\n		<ion-title>\n			<img class="logo" src="assets/img/cica_logo.svg">\n		</ion-title>\n	</ion-navbar>\n</ion-header>\n\n<ion-content color="dark">\n	<img src="assets/img/banner_image.jpg">\n	<div padding>\n		<button ion-button full color="dark" (click)="inAppSlide()">inAppSlide</button>\n		<a ion-button full color="dark" href="http://threeleaf.net/cicalife.epub" target="_blank">ePub threeleaf.net</a>\n		<a ion-button full color="dark" href="assets/slides-tester.html">ePub direct</a><br /><br />\n		<button ion-button full color="dark" (click)="openEnglish()">BERMUDA TRANSITION ENGLISH</button>\n		<button ion-button full color="dark" (click)="openSpanish()">BERMUDA TRANSITION ESPAÑOL</button>\n		<button ion-button full color="dark" (click)="openPortuguese()">BERMUDA TRANSIÇÃO PORTUGUÊS</button>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/cicalife/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/tonymccallie/Sites/cicalife/src/pages/home/home.html"*/'<ion-header no-border>\n	<ion-navbar color="dark">\n		<ion-title>\n			<img class="logo" src="assets/img/cica_logo.svg">\n		</ion-title>\n	</ion-navbar>\n</ion-header>\n\n<ion-content color="dark">\n	<img src="assets/img/banner_image.jpg">\n	<div padding>\n		<button ion-button full color="dark" (click)="inAppSlide()">inAppSlide</button>\n		<button ion-button full color="dark" (click)="inAppSlide2()">inAppSlide2</button>\n		<a ion-button full color="dark" href="http://threeleaf.net/cicalife.epub" target="_blank">ePub threeleaf.net</a>\n		<a ion-button full color="dark" href="assets/slides-tester.html">ePub direct</a><br /><br />\n		<button ion-button full color="dark" (click)="openEnglish()">BERMUDA TRANSITION ENGLISH</button>\n		<button ion-button full color="dark" (click)="openSpanish()">BERMUDA TRANSITION ESPAÑOL</button>\n		<button ion-button full color="dark" (click)="openPortuguese()">BERMUDA TRANSIÇÃO PORTUGUÊS</button>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/cicalife/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]) === "function" && _b || Object])
 ], HomePage);

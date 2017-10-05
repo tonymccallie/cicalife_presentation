@@ -25,7 +25,12 @@ export class HomePage {
 
 	inAppSlide() {
 		console.log('inAppSlide');
-		const browser = this.iab.create('assets/slides-tester.html','_blank','location=no,toolbar=no');
+		const browser = this.iab.create('assets/slides-tester.html','_blank','location=no');
+	}
+
+	inAppSlide2() {
+		console.log('inAppSlide');
+		window.open('assets/slides-tester.html','_blank','location=no,status=no');
 	}
 
 	openPortuguese() {
