@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { StatusBar } from '@ionic-native/status-bar';
 
 @Component({
 	selector: 'page-home',
 	templateUrl: 'home.html'
 })
 export class HomePage {
+	statusBar: any;
 
-	constructor(public navCtrl: NavController, private iab: InAppBrowser) {
-
+	constructor(public navCtrl: NavController, private iab: InAppBrowser, public statusBar: StatusBar) {
+		this.statusBar = statusBar;
 	}
 
 	openEnglish() {
@@ -26,11 +28,9 @@ export class HomePage {
 	inAppSlide() {
 		console.log('inAppSlide');
 		const browser = this.iab.create('assets/slides-tester.html','_blank','location=no');
-	}
-
-	inAppSlide2() {
-		console.log('inAppSlide');
-		window.open('assets/slides-tester.html','_blank','location=no,status=no');
+		this.statusBar.overlaysWebView(true);
+		this.statusBar.overlaysWebView(false);
+		this.statusBar.hide();
 	}
 
 	openPortuguese() {

@@ -42,6 +42,7 @@ webpackEmptyAsyncContext.id = 149;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(191);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -54,10 +55,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = (function () {
-    function HomePage(navCtrl, iab) {
+    function HomePage(navCtrl, iab, statusBar) {
         this.navCtrl = navCtrl;
         this.iab = iab;
+        this.statusBar = statusBar;
+        this.statusBar = statusBar;
     }
     HomePage.prototype.openEnglish = function () {
         console.log('openEnglish');
@@ -70,10 +74,9 @@ var HomePage = (function () {
     HomePage.prototype.inAppSlide = function () {
         console.log('inAppSlide');
         var browser = this.iab.create('assets/slides-tester.html', '_blank', 'location=no');
-    };
-    HomePage.prototype.inAppSlide2 = function () {
-        console.log('inAppSlide');
-        window.open('assets/slides-tester.html', '_blank', 'location=no,status=no');
+        this.statusBar.overlaysWebView(true);
+        this.statusBar.overlaysWebView(false);
+        this.statusBar.hide();
     };
     HomePage.prototype.openPortuguese = function () {
         console.log('openPortuguese');
@@ -82,12 +85,12 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/tonymccallie/Sites/cicalife/src/pages/home/home.html"*/'<ion-header no-border>\n	<ion-navbar color="dark">\n		<ion-title>\n			<img class="logo" src="assets/img/cica_logo.svg">\n		</ion-title>\n	</ion-navbar>\n</ion-header>\n\n<ion-content color="dark">\n	<img src="assets/img/banner_image.jpg">\n	<div padding>\n		<button ion-button full color="dark" (click)="inAppSlide()">inAppSlide</button>\n		<button ion-button full color="dark" (click)="inAppSlide2()">inAppSlide2</button>\n		<a ion-button full color="dark" href="http://threeleaf.net/cicalife.epub" target="_blank">ePub threeleaf.net</a>\n		<a ion-button full color="dark" href="assets/slides-tester.html">ePub direct</a><br /><br />\n		<button ion-button full color="dark" (click)="openEnglish()">BERMUDA TRANSITION ENGLISH</button>\n		<button ion-button full color="dark" (click)="openSpanish()">BERMUDA TRANSITION ESPAÑOL</button>\n		<button ion-button full color="dark" (click)="openPortuguese()">BERMUDA TRANSIÇÃO PORTUGUÊS</button>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/cicalife/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/tonymccallie/Sites/cicalife/src/pages/home/home.html"*/'<ion-header no-border>\n	<ion-navbar color="dark">\n		<ion-title>\n			<img class="logo" src="assets/img/cica_logo.svg">\n		</ion-title>\n	</ion-navbar>\n</ion-header>\n\n<ion-content color="dark">\n	<img src="assets/img/banner_image.jpg">\n	<div padding>\n		<button ion-button full color="dark" (click)="inAppSlide()">inAppSlide</button>\n		<a ion-button full color="dark" href="http://threeleaf.net/cicalife.epub" target="_blank">ePub threeleaf.net</a>\n		<a ion-button full color="dark" href="assets/slides-tester.html">ePub direct</a><br /><br />\n		<button ion-button full color="dark" (click)="openEnglish()">BERMUDA TRANSITION ENGLISH</button>\n		<button ion-button full color="dark" (click)="openSpanish()">BERMUDA TRANSITION ESPAÑOL</button>\n		<button ion-button full color="dark" (click)="openPortuguese()">BERMUDA TRANSIÇÃO PORTUGUÊS</button>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/cicalife/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object])
 ], HomePage);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
