@@ -7,10 +7,18 @@
 </ion-header>
 
 <ion-content color="dark">
-	<img src="assets/img/banner_image.jpg">
-	<div padding>
-		<button ion-button full color="dark" (click)="openEnglish()">BERMUDA TRANSITION ENGLISH</button>
-		<button ion-button full color="dark" (click)="openSpanish()">BERMUDA TRANSITION ESPAÑOL</button>
-		<button ion-button full color="dark" (click)="openPortuguese()">BERMUDA TRANSIÇÃO PORTUGUÊS</button>
-	</div>
+	<ion-grid>
+		<ion-row>
+			<ion-col col-12 col-sm-5>
+				<img src="assets/img/banner_image.jpg">
+			</ion-col>
+			<ion-col col-12 col-sm-7>
+				<div padding>
+					<button ion-button full color="dark" (click)="openEnglish()">BERMUDA TRANSITION ENGLISH</button>
+					<button ion-button full color="dark" (click)="openSpanish()">BERMUDA TRANSITION ESPAÑOL</button>
+					<button ion-button full color="dark" (click)="openPortuguese()">BERMUDA TRANSIÇÃO PORTUGUÊS</button>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
 </ion-content>
